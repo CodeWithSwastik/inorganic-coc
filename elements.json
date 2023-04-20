@@ -1,0 +1,37 @@
+{
+    "H": {
+        "name": "Hydrogen",
+        "Z": 1,
+        "group": "Hydrogen",
+        "period": 1,
+        "block": "s"
+    },
+    "N": {
+        "name": "Nitrogen",
+        "Z": 7,
+        "group": "Pnictogen",
+        "period": 2,
+        "block": "p"
+    },
+    "O": {
+        "name": "Oxygen",
+        "Z": 8,
+        "group": "Chalcogen",
+        "period": 2,
+        "block": "p"
+    },
+    "Na": {
+        "name": "Sodium",
+        "Z": 11,
+        "group": "Alkali Metal",
+        "period": 3,
+        "block": "s"
+    },
+    "Cl": {
+        "name": "Chlorine",
+        "Z": 17,
+        "group": "Halogen",
+        "period": 3,
+        "block": "p"
+    }
+}

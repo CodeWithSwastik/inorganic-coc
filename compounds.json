@@ -1,0 +1,306 @@
+{
+    "H2": {
+        "Shape": "Linear",
+        "Constituents": {
+            "H": 2
+        }
+    },
+    "O2": {
+        "Shape": "Linear",
+        "Constituents": {
+            "O": 2
+        }
+    },
+    "O3": {
+        "Shape": "Bent",
+        "Constituents": {
+            "O": 3
+        }
+    },
+    "Cl2": {
+        "Shape": "Linear",
+        "Constituents": {
+            "Cl": 2
+        }
+    },    
+    "H2O": {
+        "Shape": "Bent",
+        "Constituents": {
+            "H": 2,
+            "O": 1
+        }
+    },
+    "HCl": {
+        "Shape": "Linear",
+        "Constituents": {
+            "H": 1,
+            "Cl": 1
+        }
+    },
+    "HOCl": {
+        "Shape": "Bent",
+        "Constituents": {
+            "H": 1,
+            "O": 1,
+            "Cl": 1
+        }       
+    },
+    "HClO4": {
+        "Shape": "Tetrahedral",
+        "Constituents": {
+            "H": 1,
+            "Cl": 1,
+            "O": 4
+        }       
+    },
+    "H2O2": {
+        "Shape": "Non Planar",
+        "Constituents": {
+            "H": 2,
+            "O": 2
+        }
+    },
+    "N2": {
+        "Shape": "Linear",
+        "Constituents": {
+            "N": 2
+        }
+    },
+    "NH3": {
+        "Shape": "Trigonal Pyramidal",
+        "Constituents": {
+            "N": 1,
+            "H": 3
+        }
+    },
+    "HNO3": {
+        "Shape": "Planar",
+        "Constituents": {
+            "H": 1,
+            "N": 1,
+            "O": 3
+        }
+    },
+    "HNO2": {
+        "Shape": "Bent",
+        "Constituents": {
+            "H": 1,
+            "N": 1,
+            "O": 2
+        }
+    },
+    "HN3": {
+        "Shape": "Approximately Linear",
+        "Constituents": {
+            "H": 1,
+            "N": 3
+        }        
+    },
+    "N2H4": {
+        "Shape": "Trigonal pyramidal",
+        "Constituents": {
+            "N": 2,
+            "H": 4
+        }           
+    },
+    "NO": {
+        "Shape": "Linear",
+        "Constituents": {
+            "N": 1,
+            "O": 1
+        }
+    },
+    "N2O": {
+        "Shape": "Linear",
+        "Constituents": {
+            "N": 2,
+            "O": 1
+        }
+    },
+    "NO2": {
+        "Shape": "Bent",
+        "Constituents": {
+            "N": 1,
+            "O": 2
+        }
+    },
+    "N2O3": {
+        "Shape": "Planar",
+        "Constituents": {
+            "N": 2,
+            "O": 3
+        }
+    },
+    "N2O4": {
+        "Shape": "Planar",
+        "Constituents": {
+            "N": 2,
+            "O": 4
+        }
+    },
+    "N2O5": {
+        "Shape": "Planar",
+        "Constituents": {
+            "N": 2,
+            "O": 5
+        }
+    },
+    "NH2Cl": {
+        "Shape": "Trigonal Pyramidal",
+        "Constituents": {
+            "N": 1,
+            "H": 2,
+            "Cl": 1
+        }
+    },
+    "NHCl2": {
+        "Shape": "Trigonal Pyramidal",
+        "Constituents": {
+            "N": 1,
+            "H": 1,
+            "Cl": 2
+        }
+    },
+    "NCl3": {
+        "Shape": "Trigonal Pyramidal",
+        "Constituents": {
+            "N": 1,
+            "Cl": 3
+        }        
+    },
+    "NOCl": {
+        "Shape": "Bent",
+        "Constituents": {
+            "N": 1,
+            "O": 1,
+            "Cl": 1
+        }
+    },
+    "Cl2O": {
+        "Shape": "Bent",
+        "Constituents": {
+            "Cl": 2,
+            "O": 1
+        }        
+    },
+    "ClO2": {
+        "Shape": "Bent",
+        "Constituents": {
+            "Cl": 1,
+            "O": 2
+        }        
+    },
+    "Cl2O6": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "Cl": 2,
+            "O": 6
+        }        
+    },
+    "Cl2O7": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "Cl": 2,
+            "O": 7
+        }        
+    },
+    "NaH": {
+        "Shape": "Linear",
+        "Constituents": {
+            "Na": 1,
+            "H": 1
+        }
+    },
+    "NaCl": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "Na": 1,
+            "Cl": 1
+        }
+    },
+    "Na2O": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "Na": 2,
+            "O": 1
+        }        
+    },
+    "Na2O2": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "Na": 2,
+            "O": 2
+        }        
+    },
+    "NaOH": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "Na": 1,
+            "O": 1,
+            "H": 1
+        }        
+    },    
+    "NaNH2": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "Na": 1,
+            "N": 1,
+            "H": 2
+        }        
+    }, 
+    "NaNO2": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "Na": 1,
+            "N": 1,
+            "O": 2
+        }        
+    },
+    "NaNO3": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "Na": 1,
+            "N": 1,
+            "O": 3
+        }        
+    },
+    "NaClO3": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "Na": 1,
+            "Cl": 1,
+            "O": 3
+        }          
+    },
+    "NaOCl": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "Na": 1,
+            "Cl": 1,
+            "O": 1
+        }          
+    },
+    "NaClO2": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "Na": 1,
+            "Cl": 1,
+            "O": 2
+        }          
+    },
+    "NaClO4": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "Na": 1,
+            "Cl": 1,
+            "O": 4
+        }          
+    },
+    "NaN3": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "Na": 1,
+            "N": 3
+        }                  
+    }
+}
