@@ -16,10 +16,10 @@ class Goal:
 DEFAULT_GOALS = [
     Goal("Create a Linear compound!", 20, lambda c: c.shape == "Linear"),
     Goal("Create a Bent (V shaped) compound!", 30, lambda c: c.shape == "Bent"),
-    Goal("Create a Tetrahedral compound!", 40, lambda c: c.shape == "Tetrahedral"),
-    Goal("Create a Non Planar compound!", 50, lambda c: c.shape == "Non Planar"),
-    Goal("Create a Planar compound!", 50, lambda c: c.shape == "Planar"),
-    Goal("Create a Trigonal Pyramidal compound!", 50, lambda c: c.shape == "Trigonal Pyramidal"),
+    Goal("Create a Tetrahedral compound!", 30, lambda c: c.shape == "Tetrahedral"),
+    Goal("Create a Non Planar compound!", 30, lambda c: c.shape == "Non Planar"),
+    Goal("Create a Planar compound!", 30, lambda c: c.shape == "Planar"),
+    Goal("Create a Trigonal Pyramidal compound!", 30, lambda c: c.shape == "Trigonal Pyramidal"),
     Goal("Create a compound with only s block elements!", 20, lambda c: all(e.block=="s" for e in c.elements)),
     Goal("Create a compound with only p block elements!", 20, lambda c: all(e.block=="p" for e in c.elements)),
 
