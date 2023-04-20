@@ -1,4 +1,4 @@
-from compounds import COMPOUNDS
+from compounds import COMPOUNDS, ELEMENTS
 import random
 
 class Goal:
@@ -57,7 +57,7 @@ class Game:
 
 
     def add_atom(self, player = None):
-        ATOMS = ["H", "O", "Cl", "N", "Na"]
+        ATOMS = list(ELEMENTS)
         atom = random.choice(ATOMS)
         player = player or self.current_turn
         self.inventory[player].append(atom)
