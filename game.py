@@ -117,26 +117,3 @@ class Game:
         for p in self.players:
             for _ in range(6):
                 self.add_atom(p)
-        
-        
-
-# g = Game(["Swas", "Tapu", "Zapp"])
-# g.add_atom()
-# g.add_atom()
-# g.add_atom()
-# g.add_atom()
-# g.add_atom()
-
-# g.add_atom()
-
-# print(g.leaderboard, g.inventory)
-# g.create_compound("H2O")
-# print(g.leaderboard, g.inventory)
-# g.next_turn()
-# g.add_atom()
-# g.add_atom()
-# g.add_atom()
-# g.add_atom()
-# g.create_compound("H2")
-# print(g.leaderboard, g.inventory)
-
