@@ -89,6 +89,14 @@
             "O": 2
         }
     },
+    "HNO4": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "H": 1,
+            "N": 1,
+            "O": 4
+        }
+    },
     "HN3": {
         "Shape": "Approximately Linear",
         "Constituents": {
