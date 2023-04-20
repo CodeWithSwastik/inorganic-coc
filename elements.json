@@ -33,5 +33,12 @@
         "group": "Halogen",
         "period": 3,
         "block": "p"
+    },
+    "Xe": {
+        "name": "Xenon",
+        "Z": 54,
+        "group": "Noble Gas",
+        "period": 5,
+        "block": "p"
     }
 }
