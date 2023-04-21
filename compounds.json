@@ -311,6 +311,13 @@
             "N": 3
         }                  
     },
+    "XeO2": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "Xe": 1,
+            "O": 2
+        }               
+    },
     "XeO3": {
         "Shape": "Trigonal Pyramidal",
         "Constituents": {

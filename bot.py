@@ -170,7 +170,7 @@ async def create(ctx, compound: str):
     try:
         view = ViewInv()
         next_turn = None
-        if compound == "PASS":
+        if compound.upper() == "PASS":
             game.next_turn()
             next_turn = game.current_turn
             await ctx.respond(f"{ctx.author.name} has chosen to pass this round. Next Turn: {next_turn.mention}", view=view)            
