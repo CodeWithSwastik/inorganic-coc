@@ -88,9 +88,9 @@ class Game:
                 points += quest.points
                 quest.active = False
                 completed_quests.append(quest)
-                quests = [g for g in DEFAULT_QUESTS if g.active and g not in self.Quests]
+                quests = [g for g in DEFAULT_QUESTS if g.active and g not in self.quests]
                 if quests:
-                    self.Quests.append(random.choice(quests))
+                    self.quests.append(random.choice(quests))
 
         self.leaderboard[player] += points
         self.created_compounds.append(compound)
