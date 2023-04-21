@@ -26,6 +26,15 @@
         "block": "p",
         "electronegativity": 3.44
     },
+    "F": {
+        "name": "Fluorine",
+        "score": 5,
+        "Z": 7,
+        "group": "Halogen",
+        "period": 2,
+        "block": "p",
+        "electronegativity": 4.00
+    },
     "Na": {
         "name": "Sodium",
         "score": 15,
@@ -34,6 +43,15 @@
         "period": 3,
         "block": "s",
         "electronegativity": 0.93
+    },
+    "S": {
+        "name": "Sulphur",
+        "score": 10,
+        "Z": 16,
+        "group": "Chalcogen",
+        "period": 3,
+        "block": "p",
+        "electronegativity": 2.58        
     },
     "Cl": {
         "name": "Chlorine",
@@ -52,14 +70,5 @@
         "period": 5,
         "block": "p",
         "electronegativity": 2.60
-    },
-    "S": {
-        "name": "Sulphur",
-        "score": 10,
-        "Z": 16,
-        "group": "Chalcogen",
-        "period": 3,
-        "block": "p",
-        "electronegativity": 2.58        
     }
 }
