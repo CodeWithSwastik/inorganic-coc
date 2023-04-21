@@ -57,8 +57,7 @@ class Game:
 
 
     def add_atom(self, player = None):
-        ATOMS = list(ELEMENTS)
-        atom = random.choice(ATOMS)
+        atom = random.choices(list(ELEMENTS), weights=[1/e.score for e in ELEMENTS.values()], k=1)[0]
         player = player or self.current_turn
         self.inventory[player].append(atom)
         return atom
@@ -74,17 +73,16 @@ class Game:
         if compound in self.created_compounds:
             raise Exception("That compound has already been made by someone before!")
         
-        constituents = COMPOUNDS[compound].constituents
-        total_atoms_used = 0
+        comp = COMPOUNDS[compound]
+        constituents = comp.constituents
         for c in constituents:
-            total_atoms_used += constituents[c]
             for _ in range(constituents[c]):
                 self.inventory[player].remove(c)
         
-        points = total_atoms_used*10
+        points = comp.score
         completed_quests = []
         for quest in self.active_quests:
-            if quest.evaluate(COMPOUNDS[compound]):
+            if quest.evaluate(comp):
                 points += quest.points
                 quest.active = False
                 completed_quests.append(quest)
@@ -94,7 +92,7 @@ class Game:
 
         self.leaderboard[player] += points
         self.created_compounds.append(compound)
-        return total_atoms_used*10, completed_quests
+        return comp.score, completed_quests
         
     def _can_create_compound(self, compound, player):
         constituents = COMPOUNDS[compound].constituents

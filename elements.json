@@ -1,6 +1,7 @@
 {
     "H": {
         "name": "Hydrogen",
+        "score": 5,
         "Z": 1,
         "group": "Hydrogen",
         "period": 1,
@@ -9,6 +10,7 @@
     },
     "N": {
         "name": "Nitrogen",
+        "score": 5,
         "Z": 7,
         "group": "Pnictogen",
         "period": 2,
@@ -17,6 +19,7 @@
     },
     "O": {
         "name": "Oxygen",
+        "score": 5,
         "Z": 8,
         "group": "Chalcogen",
         "period": 2,
@@ -25,6 +28,7 @@
     },
     "Na": {
         "name": "Sodium",
+        "score": 15,
         "Z": 11,
         "group": "Alkali Metal",
         "period": 3,
@@ -33,6 +37,7 @@
     },
     "Cl": {
         "name": "Chlorine",
+        "score": 10,
         "Z": 17,
         "group": "Halogen",
         "period": 3,
@@ -41,6 +46,7 @@
     },
     "Xe": {
         "name": "Xenon",
+        "score": 25,
         "Z": 54,
         "group": "Noble Gas",
         "period": 5,
@@ -49,6 +55,7 @@
     },
     "S": {
         "name": "Sulphur",
+        "score": 10,
         "Z": 16,
         "group": "Chalcogen",
         "period": 3,
