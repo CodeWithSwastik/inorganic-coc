@@ -391,5 +391,219 @@
             "S": 1,
             "O": 2
         }        
+    },
+    "S4N4": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "S": 4,
+            "N": 4
+        }
+    },
+    "Na2S": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "Na": 2,
+            "S": 1
+        }
+    },
+    "S2Cl2": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "S": 2,
+            "Cl": 2
+        }
+    },
+    "SCl2":{
+        "Shape": "Undefined",
+        "Constituents": {
+            "S": 1,
+            "Cl": 2
+        }
+    },
+    "H2S2O7": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "H": 2,
+            "S": 2,
+            "O": 7
+        }
+    },
+    "H2SO4": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "H":2,
+            "S":1,
+            "O":4
+        }
+    },
+    "H2SO3": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "H":2,
+            "S":1,
+            "O":3
+        }
+    },
+    "H2SO5": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "H": 2,
+            "S": 1,
+            "O": 5
+        }
+    },
+    "(NH4)2S": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "N": 1,
+            "H": 4,
+            "S": 1
+        }
+    },
+    "Na2S2O4": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "Na": 2,
+            "S": 2,
+            "O": 4
+        }
+    },
+    "Na2S2O8": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "Na": 2,
+            "S": 2,
+            "O": 8
+        }
+    },
+    "Na2SO4": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "Na": 2,
+            "S": 1,
+            "O": 4
+        }
+    },
+    "Na2SO3": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "Na": 2,
+            "S": 1,
+            "O": 3
+        }
+    },
+    "Na2S2O3": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "Na": 2,
+            "S":  2,
+            "O":  3
+        }
+    },
+    "SO2Cl2": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "S":  1,
+            "O":  2,
+            "Cl": 2
+        }
+    },
+    "SOCl2": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "S":  1,
+            "O":  1,
+            "Cl": 2
+        }
+    },
+    "(NH4)HSO4": {
+        "Shape": "Undefined",
+        "Constituents":{
+            "N": 1,
+            "H": 5,
+            "S": 1,
+            "O": 4
+        }
+    },
+    "(NH4)SO3NH2": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "N": 2,
+            "H": 6,
+            "S": 1,
+            "O": 3
+        }
+    },
+    "(NH4)2SO3": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "N": 1,
+            "H": 4,
+            "S": 1,
+            "O": 3
+        }
+    },
+    "(NH4)2SO4": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "N": 1,
+            "H": 4,
+            "S": 1,
+            "O": 4
+        }
+    },
+    "(NH4)2S2O8": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "N": 1,
+            "H": 4,
+            "S": 2,
+            "O": 8
+        }
+    },
+    "NOHSO4": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "N": 1,
+            "O": 5,
+            "H": 1,
+            "S": 1
+        }
+    },
+    "H3NO3S": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "H": 3,
+            "N": 1,
+            "O": 3,
+            "S": 1
+        }
+    },
+    "NaHSO4": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "Na": 1,
+            "H": 1,
+            "S": 1,
+            "O": 4
+        }
+    },
+    "NaHSO3": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "Na": 1,
+            "H": 1,
+            "S": 1,
+            "O": 3
+        }
+    },
+    "ClSO3H": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "Cl":1,
+            "S": 1,
+            "O": 3,
+            "H": 1
+        }
     }
 }
