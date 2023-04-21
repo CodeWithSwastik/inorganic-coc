@@ -46,5 +46,13 @@
         "period": 5,
         "block": "p",
         "electronegativity": 2.60
+    },
+    "S": {
+        "name": "Sulphur",
+        "Z": 16,
+        "group": "Chalcogen",
+        "period": 3,
+        "block": "p",
+        "electronegativity": 2.58        
     }
 }

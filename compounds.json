@@ -340,5 +340,43 @@
             "Xe": 1,
             "O": 6
         }   
+    },
+    "S2": {
+        "Shape": "Linear",
+        "Constituents": {
+            "S": 2
+        }        
+    },
+    "S3": {
+        "Shape": "Bent",
+        "Constituents": {
+            "S": 3
+        }        
+    },
+    "S6": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "S": 6
+        }        
+    },
+    "S7": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "S": 7
+        }        
+    },
+    "S8": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "S": 8
+        }        
+    },
+    "H2S": {
+        "Shape": "Bent",
+        "Constituents": {
+            "H": 2,
+            "S": 1
+        }        
     }
+
 }
