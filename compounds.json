@@ -3,37 +3,31 @@
       "Shape":"Linear",
       "Constituents":{
           "H":2 
- 
         }
     },
   "O2":{
       "Shape":"Linear",
       "Constituents":{
           "O":2 
- 
         }
     },
     "O3":{
         "Shape":"Bent",
         "Constituents":{
             "O":3 
- 
         }
     },
     "Cl2":{
         "Shape":"Linear",
         "Constituents":{
             "Cl":2 
- 
         }
     },
-     
  "H2O":{
         "Shape":"Bent",
         "Constituents":{
             "H":2,
             "O":1 
- 
         }
     },
     "HCl":{
@@ -41,7 +35,6 @@
         "Constituents":{
             "H":1,
             "Cl":1 
- 
         }
     },
     "HOCl":{
@@ -50,9 +43,7 @@
             "H":1,
             "O":1,
             "Cl":1 
- 
         } 
- 
     },
     "HClO4":{
         "Shape":"Tetrahedral",
@@ -60,23 +51,19 @@
             "H":1,
             "Cl":1,
             "O":4 
- 
         } 
- 
     },
     "H2O2":{
         "Shape":"NonPlanar",
         "Constituents":{
             "H":2,
             "O":2 
- 
         }
     },
     "N2":{
         "Shape":"Linear",
         "Constituents":{
             "N":2 
- 
         }
     },
     "NH3":{
@@ -84,7 +71,6 @@
         "Constituents":{
             "N":1,
             "H":3 
- 
         }
     },
     "HNO3":{
@@ -93,7 +79,6 @@
             "H":1,
             "N":1,
             "O":3 
- 
         }
     },
     "HNO2":{
@@ -102,7 +87,6 @@
             "H":1,
             "N":1,
             "O":2 
- 
         }
     },
     "HNO4":{
@@ -111,7 +95,6 @@
             "H":1,
             "N":1,
             "O":4 
- 
         }
     },
     "HN3":{
@@ -119,25 +102,20 @@
         "Constituents":{
             "H":1,
             "N":3 
- 
         } 
- 
     },
     "N2H4":{
         "Shape":"TrigonalPyramidal",
         "Constituents":{
             "N":2,
             "H":4 
- 
         } 
- 
     },
     "NO":{
         "Shape":"Linear",
         "Constituents":{
             "N":1,
             "O":1 
- 
         }
     },
     "N2O":{
@@ -145,7 +123,6 @@
         "Constituents":{
             "N":2,
             "O":1 
- 
         }
     },
     "NO2":{
@@ -153,7 +130,6 @@
         "Constituents":{
             "N":1,
             "O":2 
- 
         }
     },
     "N2O3":{
@@ -161,7 +137,6 @@
         "Constituents":{
             "N":2,
             "O":3 
- 
         }
     },
     "N2O4":{
@@ -169,7 +144,6 @@
         "Constituents":{
             "N":2,
             "O":4 
- 
         }
     },
     "N2O5":{
@@ -177,7 +151,6 @@
         "Constituents":{
             "N":2,
             "O":5 
- 
         }
     },
     "NH2Cl":{
@@ -186,7 +159,6 @@
             "N":1,
             "H":2,
             "Cl":1 
- 
         }
     },
     "NHCl2":{
@@ -195,7 +167,6 @@
             "N":1,
             "H":1,
             "Cl":2 
- 
         }
     },
     "NCl3":{
@@ -203,9 +174,7 @@
         "Constituents":{
             "N":1,
             "Cl":3 
- 
         } 
- 
     },
     "NOCl":{
         "Shape":"Bent",
@@ -213,7 +182,6 @@
             "N":1,
             "O":1,
             "Cl":1 
- 
         }
     },
     "Cl2O":{
@@ -221,43 +189,34 @@
         "Constituents":{
             "Cl":2,
             "O":1 
- 
         } 
- 
     },
     "ClO2":{
         "Shape":"Bent",
         "Constituents":{
             "Cl":1,
             "O":2 
- 
         } 
- 
     },
     "Cl2O6":{
         "Shape":"Undefined",
         "Constituents":{
             "Cl":2,
             "O":6 
- 
         } 
- 
     },
     "Cl2O7":{
         "Shape":"Undefined",
         "Constituents":{
             "Cl":2,
             "O":7 
- 
         } 
- 
     },
     "NaH":{
         "Shape":"Linear",
         "Constituents":{
             "Na":1,
             "H":1 
- 
         }
     },
     "NaCl":{
@@ -265,7 +224,6 @@
         "Constituents":{
             "Na":1,
             "Cl":1 
- 
         }
     },
     "Na2O":{
@@ -273,18 +231,14 @@
         "Constituents":{
             "Na":2,
             "O":1 
- 
         } 
- 
     },
     "Na2O2":{
         "Shape":"Undefined",
         "Constituents":{
             "Na":2,
             "O":2 
- 
         } 
- 
     },
     "NaOH":{
         "Shape":"Undefined",
@@ -292,31 +246,23 @@
             "Na":1,
             "O":1,
             "H":1 
- 
         } 
- 
     },
-     
  "NaNH2":{
         "Shape":"Undefined",
         "Constituents":{
             "Na":1,
             "N":1,
             "H":2 
- 
         } 
- 
     },
-     
  "NaNO2":{
         "Shape":"Undefined",
         "Constituents":{
             "Na":1,
             "N":1,
             "O":2 
- 
         } 
- 
     },
     "NaNO3":{
         "Shape":"Undefined",
@@ -324,9 +270,7 @@
             "Na":1,
             "N":1,
             "O":3 
- 
         } 
- 
     },
     "NaClO3":{
         "Shape":"Undefined",
@@ -334,9 +278,7 @@
             "Na":1,
             "Cl":1,
             "O":3 
- 
         } 
- 
     },
     "NaOCl":{
         "Shape":"Undefined",
@@ -344,9 +286,7 @@
             "Na":1,
             "Cl":1,
             "O":1 
- 
         } 
- 
     },
     "NaClO2":{
         "Shape":"Undefined",
@@ -354,9 +294,7 @@
             "Na":1,
             "Cl":1,
             "O":2 
- 
         } 
- 
     },
     "NaClO4":{
         "Shape":"Undefined",
@@ -364,45 +302,35 @@
             "Na":1,
             "Cl":1,
             "O":4 
- 
         } 
- 
     },
     "NaN3":{
         "Shape":"Undefined",
         "Constituents":{
             "Na":1,
             "N":3 
- 
         } 
- 
     },
     "XeO2":{
         "Shape":"Undefined",
         "Constituents":{
             "Xe":1,
             "O":2 
- 
         } 
- 
     },
     "XeO3":{
         "Shape":"TrigonalPyramidal",
         "Constituents":{
             "Xe":1,
             "O":3 
- 
         } 
- 
     },
     "XeO4":{
         "Shape":"Tetrahedral",
         "Constituents":{
             "Xe":1,
             "O":4 
- 
         } 
- 
     },
     "H2XeO4":{
         "Shape":"Undefined",
@@ -410,9 +338,7 @@
             "H":2,
             "Xe":1,
             "O":4 
- 
         } 
- 
     },
     "H4XeO6":{
         "Shape":"Octahedral",
@@ -420,41 +346,31 @@
             "H":4,
             "Xe":1,
             "O":6 
- 
         } 
- 
     },
     "S2":{
         "Shape":"Linear",
         "Constituents":{
             "S":2 
- 
         } 
- 
     },
     "S3":{
         "Shape":"Bent",
         "Constituents":{
             "S":3 
- 
         } 
- 
     },
     "S6":{
         "Shape":"Undefined",
         "Constituents":{
             "S":6 
- 
         } 
- 
     },
     "S7":{
         "Shape":"Undefined",
         "Constituents":{
             "S":7 
- 
         } 
- 
     },
     "S8":{
         "Shape":"Undefined",
@@ -478,35 +394,35 @@
     },
     "S4N4":{
         "Shape":"Undefined",
-        "Constitutes":{
+        "Constituents":{
             "S":4,
             "N":4
         }
     },
     "Na2S":{
         "Shape":"Undefined",
-        "Constitutes":{
+        "Constituents":{
             "Na":2,
             "S":1
         }
     },
     "S2Cl2":{
         "Shape":"Undefined",
-        "Constitutes":{
+        "Constituents":{
             "S":2,
             "Cl":2
         }
     },
     "SCl2":{
         "Shape":"Undefined",
-        "Constitutes":{
+        "Constituents":{
             "S":1,
             "Cl":2
         }
     },
     "H2S2O7":{
         "Shape":"Undefined",
-        "Constitutes":{
+        "Constituents":{
             "H":2,
             "S":2,
             "O":7
@@ -514,7 +430,7 @@
     },
     "H2SO4":{
         "Shape":"Undefined",
-        "Constitutes":{
+        "Constituents":{
             "H":2,
             "S":1,
             "O":4
@@ -522,7 +438,7 @@
     },
     "H2SO3":{
         "Shape":"Undefined",
-        "Constitutes":{
+        "Constituents":{
             "H":2,
             "S":1,
             "O":3
@@ -530,7 +446,7 @@
     },
     "H2SO5":{
         "Shape":"Undefined",
-        "Constitutes":{
+        "Constituents":{
             "H":2,
             "S":1,
             "O":5
@@ -538,7 +454,7 @@
     },
     "[NH4]2S":{
         "Shape":"Undefined",
-        "Constitutes":{
+        "Constituents":{
             "N":1,
             "H":4,
             "S":1
@@ -546,7 +462,7 @@
     },
     "Na2S2O4":{
         "Shape":"Undefined",
-        "Constitutes":{
+        "Constituents":{
             "Na":2,
             "S":2,
             "O":4
@@ -554,7 +470,7 @@
     },
     "Na2S2O8":{
         "Shape":"Undefined",
-        "Constitutes":{
+        "Constituents":{
             "Na":2,
             "S":2,
             "O":8
@@ -562,7 +478,7 @@
     },
     "Na2SO4":{
         "Shape":"Undefined",
-        "Constitutes":{
+        "Constituents":{
             "Na":2,
             "S":1,
             "O":4
@@ -570,7 +486,7 @@
     },
     "Na2SO3":{
         "Shape":"Undefined",
-        "Constitutes":{
+        "Constituents":{
             "Na":2,
             "S":1,
             "O":3
@@ -578,7 +494,7 @@
     },
     "Na2S2O3":{
         "Shape":"Undefined",
-        "Constitutes":{
+        "Constituents":{
             "Na":2,
             "S":2,
             "O":3
@@ -586,7 +502,7 @@
     },
     "SO2Cl2":{
         "Shape":"Undefined",
-        "Constitutes":{
+        "Constituents":{
             "S":1,
             "O":2,
             "Cl":2
@@ -594,7 +510,7 @@
     },
     "SOCl2":{
         "Shape":"Undefined",
-        "Constitutes":{
+        "Constituents":{
             "S":1,
             "O":1,
             "Cl":2
@@ -602,7 +518,7 @@
     },
     "[NH4]HSO4":{
         "Shape":"Undefined",
-        "Constitutes":{
+        "Constituents":{
             "N":1,
             "H":5,
             "S":1,
@@ -611,7 +527,7 @@
     },
     "[NH4]SO3NH2":{
         "Shape":"Undefined",
-        "Constitutes":{
+        "Constituents":{
             "N":2,
             "H":6,
             "S":1,
@@ -620,7 +536,7 @@
     },
     "[NH4]2SO3":{
         "Shape":"Undefined",
-        "Constitutes":{
+        "Constituents":{
             "N":1,
             "H":4,
             "S":1,
@@ -629,7 +545,7 @@
     },
     "[NH4]2SO4":{
         "Shape":"Undefined",
-        "Constitutes":{
+        "Constituents":{
             "N":1,
             "H":4,
             "S":1,
@@ -638,7 +554,7 @@
     },
     "[NH4]2S2O8":{
         "Shape":"Undefined",
-        "Constitutes":{
+        "Constituents":{
             "N":1,
             "H":4,
             "S":2,
@@ -647,7 +563,7 @@
     },
     "NOHSO4":{
         "Shape":"Undefined",
-        "Constitutes":{
+        "Constituents":{
             "N":1,
             "O":5,
             "H":1,
@@ -656,7 +572,7 @@
     },
     "H3NO3S":{
         "Shape":"Undefined",
-        "Constitutes":{
+        "Constituents":{
             "H":3,
             "N":1,
             "O":3,
@@ -665,7 +581,7 @@
     },
     "NaHSO4":{
         "Shape":"Undefined",
-        "Constitutes":{
+        "Constituents":{
             "Na":1,
             "H":1,
             "S":1,
@@ -674,7 +590,7 @@
     },
     "NaHSO3":{
         "Shape":"Undefined",
-        "Constitutes":{
+        "Constituents":{
             "Na":1,
             "H":1,
             "S":1,
@@ -683,7 +599,7 @@
     },
     "ClSO3H":{
         "Shape":"Undefined",
-        "Constitutes":{
+        "Constituents":{
             "Cl":1,
             "S":1,
             "O":3,
