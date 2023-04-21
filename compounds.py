@@ -1,13 +1,24 @@
 import json
 
 class Element:
-    def __init__(self, symbol, name, atomic_number, group, period, block) -> None:
+    def __init__(
+            self, 
+            symbol,
+            name, 
+            atomic_number, 
+            group, 
+            period, 
+            block,
+            electronegativity
+        ) -> None:
+
         self.symbol = symbol
         self.name = name
         self.atomic_number = atomic_number
         self.group = group
         self.period = period
         self.block = block
+        self.electronegativity = electronegativity
 
 class Compound:
     def __init__(self, formula, constituents, shape) -> None:
@@ -26,6 +37,7 @@ with open("elements.json") as f:
             data["group"],
             data["period"],
             data["block"],
+            data["electronegativity"]
         )
 
 
