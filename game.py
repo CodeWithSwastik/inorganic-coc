@@ -22,7 +22,7 @@ DEFAULT_QUESTS = [
     Quest("Create a Trigonal Pyramidal compound!", 30, lambda c: c.shape == "Trigonal Pyramidal"),
     Quest("Create a compound with only s block elements!", 20, lambda c: all(e.block=="s" for e in c.elements)),
     Quest("Create a compound with only p block elements!", 20, lambda c: all(e.block=="p" for e in c.elements)),
-
+    Quest("Create a compound with all elements being more electronegative than Nitrogen!", 30, lambda c: all(e.electronegativity > 3.04 for e in c.elements)),
 ]
 
 class Game:
@@ -44,7 +44,7 @@ class Game:
         self.created_compounds = []
 
         random.shuffle(DEFAULT_QUESTS)
-        self.quests = DEFAULT_QUESTS[:5]
+        self.quests = DEFAULT_QUESTS[:3]
 
     @property
     def active_quests(self):

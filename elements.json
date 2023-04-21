@@ -4,41 +4,47 @@
         "Z": 1,
         "group": "Hydrogen",
         "period": 1,
-        "block": "s"
+        "block": "s",
+        "electronegativity": 2.20
     },
     "N": {
         "name": "Nitrogen",
         "Z": 7,
         "group": "Pnictogen",
         "period": 2,
-        "block": "p"
+        "block": "p",
+        "electronegativity": 3.04
     },
     "O": {
         "name": "Oxygen",
         "Z": 8,
         "group": "Chalcogen",
         "period": 2,
-        "block": "p"
+        "block": "p",
+        "electronegativity": 3.44
     },
     "Na": {
         "name": "Sodium",
         "Z": 11,
         "group": "Alkali Metal",
         "period": 3,
-        "block": "s"
+        "block": "s",
+        "electronegativity": 0.93
     },
     "Cl": {
         "name": "Chlorine",
         "Z": 17,
         "group": "Halogen",
         "period": 3,
-        "block": "p"
+        "block": "p",
+        "electronegativity": 3.16
     },
     "Xe": {
         "name": "Xenon",
         "Z": 54,
         "group": "Noble Gas",
         "period": 5,
-        "block": "p"
+        "block": "p",
+        "electronegativity": 2.60
     }
 }
