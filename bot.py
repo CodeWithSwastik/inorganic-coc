@@ -96,8 +96,8 @@ class ViewInv(discord.ui.View):
 
         await interaction.response.send_message(embed=embed, ephemeral=True)
 
-    @discord.ui.button(label="View Goals", emoji='🔍', style=discord.ButtonStyle.green)
-    async def goal_button_callback(self, button, interaction):
+    @discord.ui.button(label="View Quests", emoji='🔍', style=discord.ButtonStyle.green)
+    async def quest_button_callback(self, button, interaction):
         game = games[interaction.guild.id] 
 
         if interaction.user not in game.players:
@@ -105,15 +105,15 @@ class ViewInv(discord.ui.View):
 
 
         embed = discord.Embed(
-            title="Active Goals 🧪",
+            title="Active Quests 🧪",
             color=discord.Color.random()
         )
 
-        if len(game.active_goals) == 0:
-            embed.description = "There are no active goals at the moment!"
+        if len(game.active_quests) == 0:
+            embed.description = "There are no active quests at the moment!"
         else:
-            for goal in game.active_goals:
-                embed.add_field(name=goal.objective, value=f"Reward: {goal.points} points!", inline=False)
+            for q in game.active_quests:
+                embed.add_field(name=q.objective, value=f"Reward: {q.points} points!", inline=False)
 
         await interaction.response.send_message(embed=embed, ephemeral=True)
 
@@ -175,14 +175,14 @@ async def create(ctx, compound: str):
             next_turn = game.current_turn
             await ctx.respond(f"{ctx.author.name} has chosen to pass this round. Next Turn: {next_turn.mention}", view=view)            
         else:
-            pts, goals = game.create_compound(compound)    
+            pts, quests = game.create_compound(compound)    
             game.next_turn()
             next_turn = game.current_turn
 
             text = f"{ctx.author.name} has succesfully created **{compound}** {random.choice(['💥', '⚗️', '🧪'])} (+{pts} points!). Next Turn: {next_turn.mention}"
-            if goals:
-                for g in goals:
-                    text += f"\nBy creating this compound, {ctx.author.name} has completed the Goal **{g.objective}** (+{g.points} points!)"
+
+            for g in quests:
+                text += f"\nBy creating this compound, {ctx.author.name} has completed the Quest: **{g.objective}** (+{g.points} points!)"
 
             await ctx.respond(text, view=view)
 

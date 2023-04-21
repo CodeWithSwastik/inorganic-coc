@@ -1,7 +1,7 @@
 from compounds import COMPOUNDS, ELEMENTS
 import random
 
-class Goal:
+class Quest:
     def __init__(self, objective, points, eval_fn) -> None:
         self.objective = objective
         self.points = points
@@ -13,15 +13,15 @@ class Goal:
         return self.active and self._eval(compound)
     
 
-DEFAULT_GOALS = [
-    Goal("Create a Linear compound!", 20, lambda c: c.shape == "Linear"),
-    Goal("Create a Bent (V shaped) compound!", 30, lambda c: c.shape == "Bent"),
-    Goal("Create a Tetrahedral compound!", 30, lambda c: c.shape == "Tetrahedral"),
-    Goal("Create a Non Planar compound!", 30, lambda c: c.shape == "Non Planar"),
-    Goal("Create a Planar compound!", 30, lambda c: c.shape == "Planar"),
-    Goal("Create a Trigonal Pyramidal compound!", 30, lambda c: c.shape == "Trigonal Pyramidal"),
-    Goal("Create a compound with only s block elements!", 20, lambda c: all(e.block=="s" for e in c.elements)),
-    Goal("Create a compound with only p block elements!", 20, lambda c: all(e.block=="p" for e in c.elements)),
+DEFAULT_QUESTS = [
+    Quest("Create a Linear compound!", 20, lambda c: c.shape == "Linear"),
+    Quest("Create a Bent (V shaped) compound!", 30, lambda c: c.shape == "Bent"),
+    Quest("Create a Tetrahedral compound!", 30, lambda c: c.shape == "Tetrahedral"),
+    Quest("Create a Non Planar compound!", 30, lambda c: c.shape == "Non Planar"),
+    Quest("Create a Planar compound!", 30, lambda c: c.shape == "Planar"),
+    Quest("Create a Trigonal Pyramidal compound!", 30, lambda c: c.shape == "Trigonal Pyramidal"),
+    Quest("Create a compound with only s block elements!", 20, lambda c: all(e.block=="s" for e in c.elements)),
+    Quest("Create a compound with only p block elements!", 20, lambda c: all(e.block=="p" for e in c.elements)),
 
 ]
 
@@ -43,12 +43,12 @@ class Game:
         self.running = False
         self.created_compounds = []
 
-        random.shuffle(DEFAULT_GOALS)
-        self.goals = DEFAULT_GOALS[:5]
+        random.shuffle(DEFAULT_QUESTS)
+        self.quests = DEFAULT_QUESTS[:5]
 
     @property
-    def active_goals(self):
-        return [g for g in self.goals if g.active]
+    def active_quests(self):
+        return [g for g in self.quests if g.active]
     
     def add_player(self, player):
         self.players.append(player)
@@ -82,19 +82,19 @@ class Game:
                 self.inventory[player].remove(c)
         
         points = total_atoms_used*10
-        completed_goals = []
-        for goal in self.active_goals:
-            if goal.evaluate(COMPOUNDS[compound]):
-                points += goal.points
-                goal.active = False
-                completed_goals.append(goal)
-                goals = [g for g in DEFAULT_GOALS if g.active and g not in self.goals]
-                if goals:
-                    self.goals.append(random.choice(goals))
+        completed_quests = []
+        for quest in self.active_Quests:
+            if quest.evaluate(COMPOUNDS[compound]):
+                points += quest.points
+                quest.active = False
+                completed_quests.append(quest)
+                quests = [g for g in DEFAULT_QUESTS if g.active and g not in self.Quests]
+                if quests:
+                    self.Quests.append(random.choice(quests))
 
         self.leaderboard[player] += points
         self.created_compounds.append(compound)
-        return total_atoms_used*10, completed_goals
+        return total_atoms_used*10, completed_quests
         
     def _can_create_compound(self, compound, player):
         constituents = COMPOUNDS[compound].constituents
