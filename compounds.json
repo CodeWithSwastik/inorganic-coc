@@ -537,8 +537,8 @@
     "(NH4)2SO3": {
         "Shape": "Undefined",
         "Constituents": {
-            "N": 1,
-            "H": 4,
+            "N": 2,
+            "H": 8,
             "S": 1,
             "O": 3
         }
@@ -546,8 +546,8 @@
     "(NH4)2SO4": {
         "Shape": "Undefined",
         "Constituents": {
-            "N": 1,
-            "H": 4,
+            "N": 2,
+            "H": 8,
             "S": 1,
             "O": 4
         }
@@ -555,8 +555,8 @@
     "(NH4)2S2O8": {
         "Shape": "Undefined",
         "Constituents": {
-            "N": 1,
-            "H": 4,
+            "N": 2,
+            "H": 8,
             "S": 2,
             "O": 8
         }
@@ -737,8 +737,8 @@
     "(NO)2XeF8": {
         "Shape": "Undefined",
         "Constituents": {
-            "N": 1,
-            "O": 1,
+            "N": 2,
+            "O": 2,
             "Xe": 1,
             "F": 8
         }
