@@ -14,15 +14,19 @@ class Quest:
     
 
 DEFAULT_QUESTS = [
-    Quest("Create a Linear compound!", 20, lambda c: c.shape == "Linear"),
-    Quest("Create a Bent (V shaped) compound!", 30, lambda c: c.shape == "Bent"),
-    Quest("Create a Tetrahedral compound!", 30, lambda c: c.shape == "Tetrahedral"),
-    Quest("Create a Non Planar compound!", 30, lambda c: c.shape == "Non Planar"),
-    Quest("Create a Planar compound!", 30, lambda c: c.shape == "Planar"),
-    Quest("Create a Trigonal Pyramidal compound!", 30, lambda c: c.shape == "Trigonal Pyramidal"),
-    Quest("Create a compound with only s block elements!", 20, lambda c: all(e.block=="s" for e in c.elements)),
-    Quest("Create a compound with only p block elements!", 20, lambda c: all(e.block=="p" for e in c.elements)),
-    Quest("Create a compound with all elements being more electronegative than Nitrogen!", 30, lambda c: all(e.electronegativity > 3.04 for e in c.elements)),
+    Quest("Create a Linear compound", 20, lambda c: c.shape == "Linear"),
+    Quest("Create a Bent (V shaped) compound", 30, lambda c: c.shape == "Bent"),
+    Quest("Create a Tetrahedral compound", 30, lambda c: c.shape == "Tetrahedral"),
+    Quest("Create a Non Planar compound", 30, lambda c: c.shape == "Non Planar"),
+    Quest("Create a Planar compound", 30, lambda c: c.shape == "Planar"),
+    Quest("Create a Trigonal Pyramidal compound", 30, lambda c: c.shape == "Trigonal Pyramidal"),
+    Quest("Create a compound with only s block elements", 20, lambda c: all(e.block=="s" for e in c.elements)),
+    Quest("Create a compound with only p block elements", 20, lambda c: all(e.block=="p" for e in c.elements)),
+    Quest("Create a compound with all elements being more electronegative than Nitrogen", 30, lambda c: all(e.electronegativity > 3.04 for e in c.elements)),
+    Quest("Create a compound with a Noble Gas", 10, lambda c: any(e.group=="Noble Gas" for e in c.elements)),
+    Quest("Create a compound with only Chalcogens", 10, lambda c: all(e.group=="Chalcogen" for e in c.elements)),
+    Quest("Create a compound with only Halogens", 10, lambda c: all(e.group=="Halogen" for e in c.elements)),
+    Quest("Create a compound with no period 2 elements", 10, lambda c: all(e.period!=2 for e in c.elements)),
 ]
 
 class Game:
