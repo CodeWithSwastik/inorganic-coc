@@ -83,7 +83,7 @@ class Game:
         
         points = total_atoms_used*10
         completed_quests = []
-        for quest in self.active_Quests:
+        for quest in self.active_quests:
             if quest.evaluate(COMPOUNDS[compound]):
                 points += quest.points
                 quest.active = False
