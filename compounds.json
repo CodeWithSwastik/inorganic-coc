@@ -54,7 +54,7 @@
         }       
     },
     "H2O2": {
-        "Shape": "Non Planar",
+        "Shape": "Open Book",
         "Constituents": {
             "H": 2,
             "O": 2
@@ -74,7 +74,7 @@
         }
     },
     "HNO3": {
-        "Shape": "Planar",
+        "Shape": "Undefined",
         "Constituents": {
             "H": 1,
             "N": 1,
@@ -655,7 +655,7 @@
         }
     },
     "O2F2": {
-        "Shape": "Open book",
+        "Shape": "Open Book",
         "Constituents": {
             "O": 2,
             "F": 2
@@ -669,21 +669,21 @@
         }
     },
     "NF5": {
-        "Shape": "Trigonal bipyramidal",
+        "Shape": "Trigonal Bipyramidal",
         "Constituents": {
             "N": 1,
             "F": 5
         }
     },
     "ClF3": {
-        "Shape": "Undefined",
+        "Shape": "T Shaped",
         "Constituents": {
             "Cl": 1,
             "F": 3
         }
     },
     "ClF5": {
-        "Shape": "Square pyramidal",
+        "Shape": "Square Pyramidal",
         "Constituents": {
             "Cl": 1,
             "F": 5
@@ -697,14 +697,14 @@
         }
     },
     "XeF4": {
-        "Shape": "Square planar",
+        "Shape": "Square Planar",
         "Constituents": {
             "Xe": 1,
             "F": 4
         }
     },
     "XeF6": {
-        "Shape": "Pentagonal bipyramidal",
+        "Shape": "Pentagonal Bipyramidal",
         "Constituents": {
             "Xe": 1,
             "F": 6
