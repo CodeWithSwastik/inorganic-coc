@@ -17,7 +17,6 @@ DEFAULT_QUESTS = [
     Quest("Create a Linear compound", 20, lambda c: c.shape == "Linear"),
     Quest("Create a Bent (V shaped) compound", 30, lambda c: c.shape == "Bent"),
     Quest("Create a Tetrahedral compound", 30, lambda c: c.shape == "Tetrahedral"),
-    Quest("Create a Non Planar compound", 30, lambda c: c.shape == "Non Planar"),
     Quest("Create a Planar compound", 30, lambda c: c.shape == "Planar"),
     Quest("Create a Trigonal Pyramidal compound", 30, lambda c: c.shape == "Trigonal Pyramidal"),
     Quest("Create a compound with only s block elements", 20, lambda c: all(e.block=="s" for e in c.elements)),
