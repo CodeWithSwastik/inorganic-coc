@@ -690,7 +690,7 @@
         }
     },
     "XeF2": {
-        "Shape": "Undefined",
+        "Shape": "Linear",
         "Constituents": {
             "Xe": 1,
             "F": 2
