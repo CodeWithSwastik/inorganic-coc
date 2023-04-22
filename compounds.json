@@ -241,7 +241,7 @@
         }        
     },
     "NaOH": {
-        "Shape": "Linear",
+        "Shape": "Undefined",
         "Constituents": {
             "Na": 1,
             "O": 1,
@@ -690,7 +690,7 @@
         }
     },
     "XeF2": {
-        "Shape": "Triogonal bipyramidal",
+        "Shape": "Undefined",
         "Constituents": {
             "Xe": 1,
             "F": 2
