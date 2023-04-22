@@ -249,7 +249,7 @@
         }        
     },    
     "NaNH2": {
-        "Shape": "Undefined",
+        "Shape": "Tetrahedral",
         "Constituents": {
             "Na": 1,
             "N": 1,
@@ -312,7 +312,7 @@
         }                  
     },
     "XeO2": {
-        "Shape": "Undefined",
+        "Shape": "Bent",
         "Constituents": {
             "Xe": 1,
             "O": 2
@@ -634,28 +634,28 @@
         }
     },
     "SF6": {
-        "Shape": "Undefined",
+        "Shape": "Triagonal bipyramidal",
         "Constituents": {
             "S": 1,
             "F": 6
         }
     },
     "SF4": {
-        "Shape": "Undefined",
+        "Shape": "Seesaw",
         "Constituents": {
             "S": 1,
             "F": 4
         }
     },
     "OF2": {
-        "Shape": "Undefined",
+        "Shape": "Bent",
         "Constituents": {
             "O": 1,
             "F": 2
         }
     },
     "O2F2": {
-        "Shape": "Undefined",
+        "Shape": "Open book",
         "Constituents": {
             "O": 2,
             "F": 2
@@ -690,21 +690,21 @@
         }
     },
     "XeF2": {
-        "Shape": "Undefined",
+        "Shape": "Linear",
         "Constituents": {
             "Xe": 1,
             "F": 2
         }
     },
     "XeF4": {
-        "Shape": "Undefined",
+        "Shape": "Square planar",
         "Constituents": {
             "Xe": 1,
             "F": 4
         }
     },
     "XeF6": {
-        "Shape": "Undefined",
+        "Shape": "Pentagonal bipyramidal",
         "Constituents": {
             "Xe": 1,
             "F": 6
@@ -741,6 +741,14 @@
             "O": 2,
             "Xe": 1,
             "F": 8
+        }
+    },
+    "NaSH":{
+        "Shape":"Undefined",
+        "Constituents":{
+            "Na": 1,
+            "S": 1,
+            "H": 1
         }
     }
 }
