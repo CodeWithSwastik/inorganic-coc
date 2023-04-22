@@ -750,5 +750,54 @@
             "S": 1,
             "H": 1
         }
+    },
+    "NH4N3": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "N": 4,
+            "H": 4
+        }
+    },
+    "NH4Cl": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "N": 1,
+            "H": 4,
+            "Cl": 1
+        }
+    },
+    "NH4OH": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "N": 1,
+            "H": 5,
+            "O": 1
+        }
+    },
+    "NH4NO3": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "N": 2,
+            "H": 4,
+            "O": 3
+        }
+    },
+    "NH4ClO3": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "N": 1,
+            "H": 4,
+            "Cl": 1,
+            "O": 3
+        }
+    },
+    "NH4ClO4": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "N": 1,
+            "H": 4,
+            "Cl": 1,
+            "O": 4
+        }
     }
 }
