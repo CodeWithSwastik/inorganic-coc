@@ -330,7 +330,22 @@
         "Constituents": {
             "Xe": 1,
             "O": 4
-        }               
+    },
+    "XeOF2": {
+            "Shape": "Undefined",
+            "Constituents": {
+                "Xe": 1,
+                "O": 1,
+                "F": 2
+        }                 
+    },
+    "XeOF4": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "Xe": 1,
+            "O": 1,
+            "F": 4
+        }                 
     },
     "H2XeO4": {
         "Shape": "Undefined",
@@ -800,4 +815,5 @@
             "O": 4
         }
     }
+ }
 }
