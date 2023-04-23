@@ -18,5 +18,9 @@
     {
         "reactants": ["NaH", "H2O"],
         "products": ["NaOH", "H2"]        
+    },
+    {
+        "reactants": ["NO", "HO2"],
+        "products": ["NO2", "HO"]            
     }
 ]

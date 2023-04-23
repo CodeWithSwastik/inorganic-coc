@@ -30,6 +30,20 @@
             "O": 1
         }
     },
+    "HO2": {
+        "Shape": "Bent",
+        "Constituents": {
+            "H": 1,
+            "O": 2
+        }        
+    },
+    "HO": {
+        "Shape": "Linear",
+        "Constituents": {
+            "H": 1,
+            "O": 1
+        }        
+    },
     "HCl": {
         "Shape": "Linear",
         "Constituents": {
@@ -249,7 +263,7 @@
         }        
     },    
     "NaNH2": {
-        "Shape": "Tetrahedral",
+        "Shape": "Undefined",
         "Constituents": {
             "Na": 1,
             "N": 1,
