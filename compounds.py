@@ -22,6 +22,9 @@ class Element:
         self.block = block
         self.electronegativity = electronegativity
 
+    def __repr__(self) -> str:
+        return f"<Element: {self.name} [{self.symbol}]>"
+    
 class Compound:
     def __init__(self, formula, constituents, shape) -> None:
         self.formula = formula
@@ -30,6 +33,33 @@ class Compound:
         self.shape = shape
         self.score = sum(e.score*self.constituents[e.symbol] for e in self.elements)
 
+    def __repr__(self) -> str:
+        return f"<Compound: {self.formula}>"
+    
+class Reaction:
+    def __init__(self, reactants, products):
+        self.reactants = [COMPOUNDS[i] for i in reactants]
+        self.products = [COMPOUNDS[i] for i in products]
+
+
+    def __repr__(self) -> str:
+        return f"<Reaction: {self.reactants} -> {self.products}>"
+    
+class ReactionManager:
+    def __init__(self) -> None:
+        self.reaction_list = []
+
+    def add(self, rxn):
+        self.reaction_list.append(rxn)
+
+    def find_reaction_with_reactants(self, *reactants):
+        rxns = [r for r in self.reaction_list if set(c.formula for c in r.reactants) == set(reactants)]
+        if rxns:
+            return rxns[0]
+        else:
+            raise Exception("Invalid reaction.")
+        
+    
 ELEMENTS = {}
 with open("elements.json") as f:
     for symbol, data in json.load(f).items():
@@ -50,9 +80,10 @@ with open("compounds.json") as f:
     for formula, data in json.load(f).items():
         COMPOUNDS[formula] = Compound(formula, data["Constituents"], data["Shape"])
 
-# import random
-# X = random.choices(list(ELEMENTS), weights=[1/e.score for e in ELEMENTS.values()], k=10)
-# for i in set(X):
-#     print(
-#         (i, X.count(i))
-#     )
+
+REACTIONS = ReactionManager()
+
+with open("reactions.json") as f:
+    for data in json.load(f):
+        r = Reaction(data["reactants"], data["products"])
+        REACTIONS.add(r)

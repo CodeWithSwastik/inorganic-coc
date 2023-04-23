@@ -330,13 +330,14 @@
         "Constituents": {
             "Xe": 1,
             "O": 4
+        }
     },
     "XeOF2": {
-            "Shape": "Undefined",
-            "Constituents": {
-                "Xe": 1,
-                "O": 1,
-                "F": 2
+        "Shape": "Undefined",
+        "Constituents": {
+            "Xe": 1,
+            "O": 1,
+            "F": 2
         }                 
     },
     "XeOF4": {
@@ -815,5 +816,4 @@
             "O": 4
         }
     }
- }
 }

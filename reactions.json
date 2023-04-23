@@ -1,0 +1,14 @@
+[
+    {
+        "reactants": ["H2", "O2"],
+        "products": ["H2O"]
+    },
+    {
+        "reactants": ["H2", "F2"],
+        "products": ["HF"]
+    },
+    {
+        "reactants": ["H2", "Cl2"],
+        "products": ["HCl"]
+    }
+]
