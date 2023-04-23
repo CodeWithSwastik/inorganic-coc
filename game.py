@@ -1,4 +1,4 @@
-from compounds import COMPOUNDS, ELEMENTS
+from compounds import COMPOUNDS, ELEMENTS, REACTIONS
 import random
 
 class Quest:
@@ -34,7 +34,8 @@ class Game:
         self.players = []
         self.leaderboard = {}
         self.inventory = {}
-        
+        self.compound_inventory = {}
+
         if players is not None:
             for p in players:
                 self.add_player(p)
@@ -57,6 +58,7 @@ class Game:
         self.players.append(player)
         self.leaderboard[player] = 0
         self.inventory[player] = []
+        self.compound_inventory[player] = []
 
 
     def add_atom(self, player = None):
@@ -82,20 +84,8 @@ class Game:
             for _ in range(constituents[c]):
                 self.inventory[player].remove(c)
         
-        points = comp.score
-        completed_quests = []
-        for quest in self.active_quests:
-            if quest.evaluate(comp):
-                points += quest.points
-                quest.active = False
-                completed_quests.append(quest)
-                quests = [g for g in DEFAULT_QUESTS if g.active and g not in self.quests]
-                if quests:
-                    self.quests.append(random.choice(quests))
-
-        self.leaderboard[player] += points
-        self.created_compounds.append(compound)
-        return comp.score, completed_quests
+        
+        return self._player_created_compound(player, comp)
         
     def _can_create_compound(self, compound, player):
         constituents = COMPOUNDS[compound].constituents
@@ -104,6 +94,43 @@ class Game:
                 return False
             
         return True
+
+    def _player_created_compound(self, player, compound):
+        if compound.formula not in self.compound_inventory[player]:
+            self.compound_inventory[player].append(compound.formula)
+
+        if compound.formula in self.created_compounds:
+            return 0, []
+        
+        points = compound.score
+        completed_quests = []
+        for quest in self.active_quests:
+            if quest.evaluate(compound):
+                points += quest.points
+                quest.active = False
+                completed_quests.append(quest)
+                quests = [g for g in DEFAULT_QUESTS if g.active and g not in self.quests]
+                if quests:
+                    self.quests.append(random.choice(quests))
+
+        self.leaderboard[player] += points
+        self.created_compounds.append(compound.formula)
+        return compound.score, completed_quests
+
+    def do_reaction(self, reactants, player = None):
+        player = player or self.current_turn
+        if any(r not in self.compound_inventory[player] for r in reactants):
+            raise Exception("You haven't yet created compounds that you are trying to react!")
+
+        rxn = REACTIONS.find_reaction_with_reactants(reactants)
+        if rxn is None:
+            raise Exception("Those compounds didn't react!")
+        
+        res = {}
+        for p in rxn.products:
+            res[p] = self._player_created_compound(player, p)
+        
+        return rxn, res
 
     def next_turn(self):
         for i in range(3):

@@ -89,10 +89,7 @@ class ViewInv(discord.ui.View):
             return await interaction.response.send_message("You are not a participant in the current game.", ephemeral=True)
 
 
-        embed = discord.Embed(
-            title="Your Inventory 🧪", description=display_inventory(game.inventory[interaction.user]),
-            color=discord.Color.random()
-        )
+        embed = get_inv_embed(game, interaction.user)
 
         await interaction.response.send_message(embed=embed, ephemeral=True)
 
@@ -132,6 +129,15 @@ async def leaderboard(ctx):
     embed.set_thumbnail(url=random_chem_gif())
     await ctx.respond(embed=embed)
 
+def get_inv_embed(game, player):
+    embed = discord.Embed(
+        title="Your Inventory 🧪",
+        color=discord.Color.random()
+    )
+
+    embed.add_field(name="Atoms ⚛", value=display_inventory(game.inventory[player]), inline=False)
+    embed.add_field(name="Compounds ⚗️", value=", ".join(game.compound_inventory[player]), inline=False)
+    return embed
 
 @bot.command()
 async def inventory(ctx):
@@ -146,10 +152,7 @@ async def inventory(ctx):
         return await ctx.respond("You are not a participant in the current game.", ephemeral=True)
 
 
-    embed = discord.Embed(
-        title="Your Inventory 🧪", description=display_inventory(game.inventory[ctx.author]),
-        color=discord.Color.random()
-    )
+    embed = get_inv_embed(game, ctx.author)
 
     await ctx.respond(embed=embed, ephemeral=True)
 
@@ -238,5 +241,54 @@ async def sabotage(ctx, player: discord.Member):
             await ctx.channel.send(f"{prev.mention} failed to create a compound in 25 seconds. Next Turn: {next_turn.mention}", view=view)
             continue
         break
+
+
+@bot.command()
+async def react(ctx, compound1: str, compound2: str):
+    """
+    Perform a reaction. 
+    """
+    if ctx.guild.id not in games:
+        return await ctx.respond("There is no game running in this server! Create one with /setup", ephemeral=True)
+    game = games[ctx.guild.id] 
+
+    if ctx.author not in game.players:
+        return await ctx.respond("You are not a participant in the current game.", ephemeral=True)
+
+    if ctx.author != game.current_turn:
+        return await ctx.respond(f"It's not your turn at the moment. Please wait for {game.current_turn} to play.", ephemeral=True)
+    
+    try:
+        view = ViewInv()
+        next_turn = None
+
+        rxn, res = game.do_reaction(reactants=[compound1, compound2])
+
+        text = f"{ctx.author.name} has succesfully performed the following reaction {random.choice(['💥', '⚗️', '🧪'])}:\n{rxn}"
+        for c in res:
+            pts, quests = res[c]
+            text += f"\nFor creating the compound **{c.formula}** (+{pts} points!)."
+            for g in quests:
+                text += f"\nBy creating this compound, {ctx.author.name} has completed the Quest: **{g.objective}** (+{g.points} points!)"
+            
+        game.next_turn()
+        next_turn = game.current_turn
+        text += f"\nNext Turn: {next_turn.mention}"
+        
+        await ctx.respond(text, view=view)
+
+        while True:
+            await asyncio.sleep(25)
+            if game.current_turn == next_turn:
+                game.next_turn()
+                prev = next_turn
+                next_turn = game.current_turn
+                await ctx.channel.send(f"{prev.mention} failed to create a compound in 25 seconds. Next Turn: {next_turn.mention}", view=view)
+                continue
+            break
+
+    except Exception as e:
+        return await ctx.respond(str(e), ephemeral=True)
+
 
 bot.run(os.getenv("BOT_TOKEN"))

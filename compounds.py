@@ -44,7 +44,10 @@ class Reaction:
 
     def __repr__(self) -> str:
         return f"<Reaction: {self.reactants} -> {self.products}>"
-    
+
+    def __str__(self) -> str:
+        return f"{' + '.join(c.formula for c in self.reactants)} -> {' + '.join(c.formula for c in self.products)}"
+        
 class ReactionManager:
     def __init__(self) -> None:
         self.reaction_list = []
@@ -52,12 +55,12 @@ class ReactionManager:
     def add(self, rxn):
         self.reaction_list.append(rxn)
 
-    def find_reaction_with_reactants(self, *reactants):
+    def find_reaction_with_reactants(self, reactants):
         rxns = [r for r in self.reaction_list if set(c.formula for c in r.reactants) == set(reactants)]
         if rxns:
             return rxns[0]
         else:
-            raise Exception("Invalid reaction.")
+            return None
         
     
 ELEMENTS = {}
