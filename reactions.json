@@ -10,5 +10,13 @@
     {
         "reactants": ["H2", "Cl2"],
         "products": ["HCl"]
+    },
+    {
+        "reactants": ["H2", "N2"],
+        "products": ["NH3"]
+    },
+    {
+        "reactants": ["NaH", "H2O"],
+        "products": ["NaOH", "H2"]        
     }
 ]

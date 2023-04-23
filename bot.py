@@ -264,7 +264,7 @@ async def react(ctx, compound1: str, compound2: str):
 
         rxn, res = game.do_reaction(reactants=[compound1, compound2])
 
-        text = f"{ctx.author.name} has succesfully performed the following reaction {random.choice(['💥', '⚗️', '🧪'])}:\n{rxn}"
+        text = f"{ctx.author.name} has succesfully performed the following reaction {random.choice(['💥', '⚗️', '🧪'])}\n\n**{rxn}**\n"
         for c in res:
             pts, quests = res[c]
             text += f"\nFor creating the compound **{c.formula}** (+{pts} points!)."
