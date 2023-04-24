@@ -22,5 +22,21 @@
     {
         "reactants": ["NO", "HO2"],
         "products": ["NO2", "HO"]            
-    }
+    },
+    {
+        "reactants": ["HCl", "NaOH"],
+        "products": ["NaCl", "H2O"]            
+    },
+    {
+        "reactants": ["NH4Cl", "NaNO2"],
+        "products": ["N2", "H2O", "NaCl"]
+    },
+    {
+        "reactants": ["N2", "O2"],
+        "products": ["NO"]        
+    },
+    {
+        "reactants": ["NH2OH", "HNO2"],
+        "products": ["H2N2O2", "H2O"]
+    }   
 ]

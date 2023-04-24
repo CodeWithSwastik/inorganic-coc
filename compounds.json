@@ -190,6 +190,22 @@
             "Cl": 3
         }        
     },
+    "NH2OH": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "N": 1,
+            "H": 3,
+            "O": 1
+        }
+    },
+    "N2H2O2": {
+        "Shape": "Undefined",
+        "Constituents": {
+            "N": 2,
+            "H": 2,
+            "O": 2
+        }        
+    },
     "NOCl": {
         "Shape": "Bent",
         "Constituents": {
