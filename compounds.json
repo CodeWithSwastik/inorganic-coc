@@ -394,6 +394,14 @@
             "O": 6
         }   
     },
+    "Na4XeO6": {
+        "Shape": "Octahedral",
+        "Constituents": {
+            "Na": 4,
+            "Xe": 1,
+            "O": 6
+        }   
+    },
     "S2": {
         "Shape": "Linear",
         "Constituents": {
