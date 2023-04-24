@@ -69,6 +69,17 @@ class SetupView(discord.ui.View):
         self.game.start()
         view = ViewInv()
         await interaction.response.send_message(f"The game has begun! Please use `/inventory` and `/create`. Current Turn: {self.game.current_turn.mention}", view=view)
+        await handle_game_loop(self.game, interaction.channel)
+
+async def handle_game_loop(game, channel):
+    while game.running:
+        c = game.current_turn
+        await asyncio.sleep(25)
+        if game.current_turn == c:
+            game.next_turn()
+            view = ViewInv()
+            await channel.send(f"{c.mention} failed to do anything in 25 seconds. Next Turn: {game.current_turn.mention}", view=view)
+
 
 def display_inventory(inventory):
     s = ""
@@ -172,7 +183,6 @@ async def create(ctx, compound: str):
         return await ctx.respond(f"It's not your turn at the moment. Please wait for {game.current_turn} to play.", ephemeral=True)
     try:
         view = ViewInv()
-        next_turn = None
         if compound.upper() == "PASS":
             game.next_turn()
             next_turn = game.current_turn
@@ -189,15 +199,6 @@ async def create(ctx, compound: str):
 
             await ctx.respond(text, view=view)
 
-        while True:
-            await asyncio.sleep(25)
-            if game.current_turn == next_turn:
-                game.next_turn()
-                prev = next_turn
-                next_turn = game.current_turn
-                await ctx.channel.send(f"{prev.mention} failed to create a compound in 25 seconds. Next Turn: {next_turn.mention}", view=view)
-                continue
-            break
 
     except Exception as e:
         return await ctx.respond(str(e), ephemeral=True)
@@ -231,16 +232,6 @@ async def sabotage(ctx, player: discord.Member):
     game.next_turn()
     next_turn = game.current_turn
     await ctx.respond(f"{ctx.author.mention} entered {player.mention}'s lab and sabotaged their inventory. Next turn: {next_turn.mention}", view=view)
-
-    while True:
-        await asyncio.sleep(25)
-        if game.current_turn == next_turn:
-            game.next_turn()
-            prev = next_turn
-            next_turn = game.current_turn
-            await ctx.channel.send(f"{prev.mention} failed to create a compound in 25 seconds. Next Turn: {next_turn.mention}", view=view)
-            continue
-        break
 
 
 @bot.command()
@@ -276,16 +267,6 @@ async def react(ctx, compound1: str, compound2: str):
         text += f"\nNext Turn: {next_turn.mention}"
         
         await ctx.respond(text, view=view)
-
-        while True:
-            await asyncio.sleep(25)
-            if game.current_turn == next_turn:
-                game.next_turn()
-                prev = next_turn
-                next_turn = game.current_turn
-                await ctx.channel.send(f"{prev.mention} failed to create a compound in 25 seconds. Next Turn: {next_turn.mention}", view=view)
-                continue
-            break
 
     except Exception as e:
         return await ctx.respond(str(e), ephemeral=True)

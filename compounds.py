@@ -46,7 +46,7 @@ class Reaction:
         return f"<Reaction: {self.reactants} -> {self.products}>"
 
     def __str__(self) -> str:
-        return f"{' + '.join(c.formula for c in self.reactants)} -> {' + '.join(c.formula for c in self.products)}"
+        return f"{' + '.join(c.formula for c in self.reactants)} ⟶ {' + '.join(c.formula for c in self.products)}"
         
 class ReactionManager:
     def __init__(self) -> None:
