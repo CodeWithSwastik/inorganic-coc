@@ -74,12 +74,17 @@ class SetupView(discord.ui.View):
 async def handle_game_loop(game, channel):
     while game.running:
         c = game.current_turn
-        await asyncio.sleep(25)
+        for i in range(25):
+            await asyncio.sleep(1)
+            if game.current_turn != c:
+                break
+
         if game.current_turn == c:
             game.next_turn()
             view = ViewInv()
             await channel.send(f"{c.mention} failed to do anything in 25 seconds. Next Turn: {game.current_turn.mention}", view=view)
 
+    await channel.send(f"The game is over! The winner is {game.winner.mention}!")
 
 def display_inventory(inventory):
     s = ""
@@ -91,7 +96,7 @@ def display_inventory(inventory):
 class ViewInv(discord.ui.View):
     def __init__(self):
         super().__init__()
-
+        
     @discord.ui.button(label="View Inventory", emoji='🔬', style=discord.ButtonStyle.blurple)
     async def inv_button_callback(self, button, interaction):
         game = games[interaction.guild.id] 
@@ -135,7 +140,7 @@ async def leaderboard(ctx):
     game = games[ctx.guild.id] 
 
     embed = discord.Embed(title="Inorganic Clash of Chem Leaderboard!", color=discord.Color.gold())
-    for x,y in dict(sorted(game.leaderboard.items(), key=lambda item: item[1], reverse=True)).items():
+    for x,y in game.sorted_leaderboard.items():
         embed.add_field(name=x.name, value=f"{y} points", inline=False)
     embed.set_thumbnail(url=random_chem_gif())
     await ctx.respond(embed=embed)

@@ -29,12 +29,15 @@ DEFAULT_QUESTS = [
 ]
 
 class Game:
-    def __init__(self, players = None) -> None:
+    def __init__(self, players = None, rounds = 3) -> None:
         
         self.players = []
         self.leaderboard = {}
         self.inventory = {}
         self.compound_inventory = {}
+        self.rounds = rounds
+        self.current_round = 1
+        self.winner = None
 
         if players is not None:
             for p in players:
@@ -136,9 +139,22 @@ class Game:
         for i in range(3):
             self.add_atom()
 
-        self.current_turn = self.players[(self.players.index(self.current_turn) + 1) % len(self.players)]
+        x = self.players.index(self.current_turn)
+
+        self.current_turn = self.players[(x + 1) % len(self.players)]
+        if self.current_turn == self.players[0]:
+            if self.current_round < self.rounds:
+                self.current_round += 1
+            else:
+                self.running = False
+                self.winner = list(self.sorted_leaderboard)[0]
+        
         return self.current_turn
 
+    @property
+    def sorted_leaderboard(self):
+        return dict(sorted(self.leaderboard.items(), key=lambda item: item[1], reverse=True))
+    
     def start(self):
         self.running = True
         self.current_turn = self.players[0]
